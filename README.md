@@ -6,6 +6,7 @@ Section 1:
 
 Philosophie:
 - Don't imitate, UNDERSTAND
+
 Conceptual aside
 - syntax parser: a program that reads your code and checks for syntax errors
 - lexical environment: where the code is written and what is around that
@@ -13,7 +14,7 @@ Conceptual aside
 
 Name/Value pairs and objects:
 -----------------------------
-Obeject: collection of name-value pairs
+Object: collection of name-value pairs
 
 The global environment and the global object:
 ---------------------------------------------
@@ -27,7 +28,7 @@ Creation and Hoisting:
 ---------------------
 the execution context is created in two phases:
 1.: Creating phase: setup memory space for variables and functions
-- in that creation phase the whole function has its own memory entirely
+- in that creation phase the whole function has its own memory
 - all variables in javascript initialy sets to undefined
 - better to always first declare then execute
 2.: Execution phase
@@ -43,11 +44,11 @@ Javascript and undefined:
 - NEVER set a variable to undefined
 -- cannot decide whether the javascript engine has been set the value or the developer
 
-Definitions:
-------------
-Single Threaded: one command at a time
-Synchronous: one line at a time and in order
-Invocation: running a function with ()
+General Javascript Definitions:
+-------------------------------
+- Single Threaded: one command at a time
+- Synchronous: one line at a time and in order
+- Invocation: running a function with ()
 
 Function invocations:
 ---------------------
@@ -63,8 +64,8 @@ Variable environment:
 
 Scope chain:
 ------------
-- if javascript doesnt find the variable, the it will look for the variable in the outer environment
-- outer environment is the global environment, because the b function is lexically sits in the global environment
+- if javascript doesnt find the variable, it will look for the variable in the outer environment
+- outer environment is the global environment [only in the example], because the b function is lexically sits in the global environment
 - it is up where the function sits phisically
 
 ES6:
