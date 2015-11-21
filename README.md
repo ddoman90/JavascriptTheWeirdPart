@@ -292,4 +292,13 @@ Conceptual aside: Array
 - javascript is dinamically typed
 - each item in an array can be different type
 
+Arguments and spread(the new approach):
+---------------------------------------
+- when a new execution context has been created, it creates: variable environment, outer environment, this, ARGUMENTS (list of all the values, that you passed to the function)
+- BWA: arguments: parameters you pass to a function
+- javascript doesnt care about the required parameters, when you invoke a function (the parameters will be undefined)
+- arguments: looks like an array, it doesn't have all the features
+- length can be checked, brakets operator can be used
+- spread: '...' if it gets available, the it will be the preferred approach
+
 
