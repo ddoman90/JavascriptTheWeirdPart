@@ -286,4 +286,10 @@ console.log(c); // howdy
 console.log(d); // Hola
 ```
 
+Conceptual aside: Array
+-----------------------
+- collections of everything
+- javascript is dinamically typed
+- each item in an array can be different type
+
 
