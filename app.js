@@ -1,27 +1,20 @@
-// in next version of javascript you can set up default parameters easily
 function greet(firstname, lastname, language) {
-
-	// Default parameters without the next version of javascript 
 	language = language || 'en';
 
-	if  (arguments.length === 0) {
-		console.log('Missing parameters');
-		console.log('------------------');
-		return;
+	if (language == 'en') {
+		console.log('Hello ' + firstname + ' ' + lastname);
 	}
-
-	console.log(firstname);
-	console.log(lastname);
-	console.log(language);
-
-	// List all the values, parameters, what we gave to the function
-	console.log(arguments);
-	console.log('args 0', arguments[0]);
-
-	console.log('----------------');
+	if (language == 'es') {
+		console.log('Hola ' + firstname + ' ' + lastname);
+	}
 }
 
-greet();
-greet('John');
-greet('John', 'Doe');
-greet('John', 'Doe', 'es', 'street', 'whatever');
+function greetEnglish(firstname, lastname) {
+	greet(firstname, lastname, 'en');
+}
+function greetSpanish(firstname, lastname) {
+	greet(firstname, lastname, 'es');
+}
+
+greetEnglish('John', 'Doe');
+greetSpanish('John', 'Doe');
