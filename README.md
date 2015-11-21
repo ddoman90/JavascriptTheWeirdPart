@@ -311,4 +311,11 @@ Dangerous aside: automatic semicolon insertion:
 - semicolons are optionals
 - syntax parser will add the missing semicolons
 
+Inmediately invoked function expressions:
+-----------------------------------------
 
+- global execution context is empty. No variables, no functions
+- there is only one line, the IIFE
+- creates the execution context of the anonymous function
+- since we have our own execution context, we don't touch the global execution context
+- in that way our code will be secure
