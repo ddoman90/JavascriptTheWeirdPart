@@ -1,11 +1,19 @@
-function getPerson() {
-	
-	// this will be undefined because of the syntax parser
-	// DO NOT PUT curly brackets in another line
-	return
-	{
-		firstname: 'Tony'
-	}
-}
+var
+	// first name of the person
+	firstname,
 
-console.log(getPerson());
+	// last name of the person
+	lastname,
+
+	// language of the person
+	language;
+
+var person = {
+	// the first name
+	firstname: 'John',
+
+	// the last name
+	lastname: 'Doe'
+};
+
+console.log(person);
