@@ -301,4 +301,14 @@ Arguments and spread(the new approach):
 - length can be checked, brakets operator can be used
 - spread: '...' if it gets available, the it will be the preferred approach
 
+Conceptual aside: Syntax parser
+-------------------------------
+- reads the code character by character
+- can make changes in the code
+
+Dangerous aside: automatic semicolon insertion:
+-----------------------------------------------
+- semicolons are optionals
+- syntax parser will add the missing semicolons
+
 

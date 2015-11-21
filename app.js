@@ -1,20 +1,11 @@
-function greet(firstname, lastname, language) {
-	language = language || 'en';
-
-	if (language == 'en') {
-		console.log('Hello ' + firstname + ' ' + lastname);
+function getPerson() {
+	
+	// this will be undefined because of the syntax parser
+	// DO NOT PUT curly brackets in another line
+	return
+	{
+		firstname: 'Tony'
 	}
-	if (language == 'es') {
-		console.log('Hola ' + firstname + ' ' + lastname);
-	}
 }
 
-function greetEnglish(firstname, lastname) {
-	greet(firstname, lastname, 'en');
-}
-function greetSpanish(firstname, lastname) {
-	greet(firstname, lastname, 'es');
-}
-
-greetEnglish('John', 'Doe');
-greetSpanish('John', 'Doe');
+console.log(getPerson());
