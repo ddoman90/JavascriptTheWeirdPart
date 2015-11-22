@@ -313,9 +313,16 @@ Dangerous aside: automatic semicolon insertion:
 
 Inmediately invoked function expressions:
 -----------------------------------------
-
 - global execution context is empty. No variables, no functions
 - there is only one line, the IIFE
 - creates the execution context of the anonymous function
 - since we have our own execution context, we don't touch the global execution context
 - in that way our code will be secure
+
+Understanding Closures:
+-----------------------
+- Global execution Context --> greet() execution context [given whattosay variable is sitting in its execution context] --> returns with a newly created function, greet() EC disappears, but the memory space is still there --> back to the global EC --> sayHi EC opens, the passed variable (name) will sit in its EC --> function gets invoked and starts to look for the whattosay variable first in its EC then in outer environment. Outer EC is the greet function (this EC is gone but the created function still has reference for it)
+- the execution context is closed in its outer variable
+- this all thing the execution context with the variables what it suppose to have access to called CLOSURE
+- feature of the javascript
+- you can rely on it
