@@ -360,3 +360,11 @@ BWA: Currying:
 --------------
 - Creating a copy of a function but with some preset parameters
 - it is very useful in mathematical situations
+
+Functional Programming:
+-----------------------
+- Functions that behave as objects
+- think on code in terms of functions
+- entirely different thinking
+- to limit reputation, we use functions
+- try not to mutate the data in deeper level. Better if you mutate it on a higher level.
