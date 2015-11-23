@@ -334,3 +334,29 @@ Framework aside: function factories:
 Closures and Callbacks:
 -----------------------
 - BWA: Callback Function: give a function to a function to execute it when 
+
+Call, apply, bind:
+------------------
+- function is a special type of object
+- it has the code
+- it has a name
+- acces to call, apply and bind methods
+- every function has acces to these methods you can use it
+
+Bind:
+-----
+- creates a copy and I can say, what will this be
+
+Call:
+-----
+- first parameter is what the this variable should be
+- instead of creating a copy, it only calls it whit specific this variable
+
+Apply:
+------
+- only difference is between call and apply, that call needs variables, but apply needs an array
+
+BWA: Currying:
+--------------
+- Creating a copy of a function but with some preset parameters
+- it is very useful in mathematical situations
