@@ -326,3 +326,7 @@ Understanding Closures:
 - this all thing the execution context with the variables what it suppose to have access to called CLOSURE
 - feature of the javascript
 - you can rely on it
+
+Framework aside: function factories:
+------------------------------------
+- great pattern
