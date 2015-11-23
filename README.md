@@ -330,3 +330,7 @@ Understanding Closures:
 Framework aside: function factories:
 ------------------------------------
 - great pattern
+
+Closures and Callbacks:
+-----------------------
+- BWA: Callback Function: give a function to a function to execute it when 
