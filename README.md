@@ -399,5 +399,8 @@ Everything is an object (or a primitive):
 - every function has on its __proto__ the original Empty function, thats why all of the functions have the call, bind, apply functions
 - in the end of the prototype chain there is always the Object{}
 
+Reflection and extend:
+----------------------
+- Reflection: an object can look at itself, listing and changing its properties and methods
 
 
