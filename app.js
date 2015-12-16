@@ -39,3 +39,17 @@ var checkPastLimitSimplified = function(limiter) {
 
 var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
 console.log(arr5);
+
+// underscore examples
+
+var arr6 = _.map(arr1, function(a) {
+	return a * 3;
+});
+
+console.log(arr6);
+
+var arr7 = _.filter([1,2,3,4,5,6], function(item) {
+	return item % 2 === 0;
+});
+
+console.log(arr7);

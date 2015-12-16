@@ -368,3 +368,10 @@ Functional Programming:
 - entirely different thinking
 - to limit reputation, we use functions
 - try not to mutate the data in deeper level. Better if you mutate it on a higher level.
+
+Underscore.js:
+--------------
+- implements a lot of functional programming concepts
+- go through the source code
+- opensource education : you can learn a lot from the open source code
+
