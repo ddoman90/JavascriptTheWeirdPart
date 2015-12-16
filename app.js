@@ -1,55 +1,27 @@
-function mapForEach(arr, fn) {
-	var newArr = [];
-	for (var i=0; i < arr.length; i++) {
-		newArr.push(fn(arr[i]));
+var person = {
+	firstName : 'Default',
+	lastName : 'Default',
+	getFullname : function() {
+		// if you call it from john then the context will be john
+		return this.firstName + ' ' + this.lastName;
 	}
-	return newArr;
-}
-
-var arr1 = [1,2,3];
-console.log(arr1);
-
-
-// classic example for using functional programming
-var arr2 = mapForEach(arr1, function (item) {
-	return item * 2;
-});
-
-console.log(arr2);
-
-var arr3 = mapForEach(arr1, function (item) {
-	return item > 2;
-});
-
-console.log(arr3);
-
-var checkPastLimit = function (limiter, item) {
-	return item > limiter;
-}
-
-var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
-console.log(arr4);
-
-// simplified function, so you don't have to bind it every time
-var checkPastLimitSimplified = function(limiter) {
-	return function (limiter, item) {
-		return item > limiter;
-	}.bind(this, limiter)
 };
 
-var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
-console.log(arr5);
+var john = {
+	firstName : 'John',
+	lastName : 'Doe'
+}
 
-// underscore examples
+// don't do this ever, for demo purposes only
+john.__proto__ = person;
 
-var arr6 = _.map(arr1, function(a) {
-	return a * 3;
-});
+console.log(john.getFullname());
 
-console.log(arr6);
 
-var arr7 = _.filter([1,2,3,4,5,6], function(item) {
-	return item % 2 === 0;
-});
+var jane = {
+	firstName : 'Jane'
+};
 
-console.log(arr7);
+jane.__proto__ = person;
+
+console.log(jane.getFullname());

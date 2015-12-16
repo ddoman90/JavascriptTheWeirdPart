@@ -375,3 +375,23 @@ Underscore.js:
 - go through the source code
 - opensource education : you can learn a lot from the open source code
 
+Object oriented prototypal Inheritance:
+---------------------------------------
+- inheritance: one object get access to the properties and methods of another object
+- classical vs. prototipal
+- classical: most popular way in other programming languages
+-- verbose
+- prototypal:
+-- simple, flexible, extesible, easy to understand
+
+Prototype:
+----------
+- obj can have props and methods
+- obj has proto{} --> this is the prototype
+-- this has other props
+- js first looks for the prop on obj then on proto
+- each object can have its own prototype
+- prototype chain
+
+
+
