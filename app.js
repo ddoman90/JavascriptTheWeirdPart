@@ -30,6 +30,7 @@ var checkPastLimit = function (limiter, item) {
 var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
 console.log(arr4);
 
+// simplified function, so you don't have to bind it every time
 var checkPastLimitSimplified = function(limiter) {
 	return function (limiter, item) {
 		return item > limiter;
