@@ -1,42 +1,26 @@
-function Person(firstname, lastname) {
-	console.log('This function invoked..');
-	this.firstname = firstname;
-	this.lastname = lastname;
+
+// Polyfill
+if (!Object.create) {
+	Object.create = function (o) {
+		if (arguments.length > 1) {
+			throw new Error('Object.create implementation only accepts the first parameter.');
+		}
+		function F() {}
+		F.protoype = o;
+		return new F();
+	}
 }
 
-Person.prototype.getFullName = function() {
-	return this.firstname + '' + this.lastname;
+var person = {
+	firstname : 'Default',
+	lastname : 'Default',
+	greet: function() {
+		return 'Hi ' + this.firstname;
+	}
 }
 
-// build objects with the new keyword
-// new is an operator
-var john = new Person('John', 'Doe');
+var john = Object.create(person);
 console.log(john);
 
-// constructing object by functions
-var jane = new Person('Jane', 'Doe');
-console.log(jane);
-
-Person.prototype.getFormalFullName = function() {
-	return this.firstname + ', ' + this.lastname;
-}
-
-console.log(john.getFormalFullName());
-
-// Built-in function constructors
-
-String.prototype.isLengthGreatherThan = function(limit) {
-	return this.length > limit;
-}
-
-// "John" is converted to a String object (only works for numbers)
-console.log("John".isLengthGreatherThan(2));
-
-
-Array.prototype.myCustomFeature = 'cool';
-
-var arr = ['John', 'Jane', 'Jim'];
-
-for (var prop in arr) {
-	console.log(prop, ': ', arr[prop]);
-}
+john.firstname = 'John';
+john.lastname = 'Doe';

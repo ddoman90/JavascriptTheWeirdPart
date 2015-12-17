@@ -446,4 +446,13 @@ Dangerous aside 2:
 - don't use for in on arrays
 - there is a possibility to somebody already modified the array prototype, thats why it has been added somthing
 
+Object.create and pure prototipal inheritance:
+----------------------------------------------
+- polyfill: code that adds a feature which the engine may lack
+
+ES6 and classes:
+----------------
+- syntactic sugar: different way to type something that doesn't change how it works under the hood
+- prototypal inheritance stays the same
+
 
