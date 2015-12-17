@@ -1,42 +1,42 @@
-var person = {
-	firstName : 'Default',
-	lastName : 'Default',
-	getFullname : function() {
-		// if you call it from john then the context will be john
-		return this.firstName + ' ' + this.lastName;
-	}
-};
-
-var john = {
-	firstName : 'John',
-	lastName : 'Doe'
+function Person(firstname, lastname) {
+	console.log('This function invoked..');
+	this.firstname = firstname;
+	this.lastname = lastname;
 }
 
-// don't do this ever, for demo purposes only
-john.__proto__ = person;
-
-// reflection example
-for (var prop in john) {
-	if (john.hasOwnProperty(prop)) {
-		// it really has the property
-		console.log(prop , ': ' , john[prop]);
-	}
+Person.prototype.getFullName = function() {
+	return this.firstname + '' + this.lastname;
 }
 
-
-var jane = {
-	address : 'something street',
-	getFormalFullName : function() {
-		return this.lastName + ', ' + this.firstname;
-	}
-}
-
-var jim = {
-	getFirstName : function() {
-		return this.firstName;
-	}
-}
-
-_.extend(john, jane, jim);
-
+// build objects with the new keyword
+// new is an operator
+var john = new Person('John', 'Doe');
 console.log(john);
+
+// constructing object by functions
+var jane = new Person('Jane', 'Doe');
+console.log(jane);
+
+Person.prototype.getFormalFullName = function() {
+	return this.firstname + ', ' + this.lastname;
+}
+
+console.log(john.getFormalFullName());
+
+// Built-in function constructors
+
+String.prototype.isLengthGreatherThan = function(limit) {
+	return this.length > limit;
+}
+
+// "John" is converted to a String object (only works for numbers)
+console.log("John".isLengthGreatherThan(2));
+
+
+Array.prototype.myCustomFeature = 'cool';
+
+var arr = ['John', 'Jane', 'Jim'];
+
+for (var prop in arr) {
+	console.log(prop, ': ', arr[prop]);
+}

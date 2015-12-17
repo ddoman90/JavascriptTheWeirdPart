@@ -403,4 +403,47 @@ Reflection and extend:
 ----------------------
 - Reflection: an object can look at itself, listing and changing its properties and methods
 
+Building objects:
+-----------------
+- function constructors
+- new
+- the history of javascript
+
+Function Constructors:
+----------------------
+- a normal function that is used to construct objects
+- this variable points a new object, and that object is returned from the function automatically
+- calling the new operator something special happens. 
+1. It sets an empty object
+2. Calls the function : in the function the this keyword points to the empty object which was created before
+
+Function Constructors and prototype:
+------------------------------------
+- function has name, code, prototype
+- prototype is useless until you use the function as a function constructor (with the new operator)
+- properties should be added to the constructor function, but the methods should be added to the prototype, because if you create hundreds of instances, then functions will take up lot of memory
+- we need different properties for different instances, but can use 1 method instance in all of the instances
+
+Dangerous aside:
+----------------
+- if you forget using the new operator, then you will get and error, because you try to use a function on an object which is undefined
+- use capital letters for function constructors
+- use linter which is checking your code
+
+Built in function constructors:
+-------------------------------
+- Number: number which is created by this built-in function constructor is not a primitive anymore
+- String, Date, Array
+- these functions creating objects and put the primitive inside and extends with a lot of functionality
+
+Dangerous aside:
+----------------
+- triple equal return false is you compare primitive and object
+- instead of Date use Moment.js
+
+Dangerous aside 2:
+------------------
+- don't use for in on arrays
+- there is a possibility to somebody already modified the array prototype, thats why it has been added somthing
+
 
