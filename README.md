@@ -455,4 +455,33 @@ ES6 and classes:
 - syntactic sugar: different way to type something that doesn't change how it works under the hood
 - prototypal inheritance stays the same
 
+ODDS and End:
+-------------
+- syntax parser says, if there is a problem
+
+Typeof, Instanceof, figuring out what something is:
+---------------------------------------------------
+- you cannot detemine typof and array with the key typeof
+- you can call Object.prototype.toString.call(reference for the array)
+- instanceof will return, if we can find the thing on the prototype chain
+- you can check the type of a function. It will return with a string: 'function'
+
+Strict mode:
+------------
+- 
+
+Open source education:
+======================
+- deep dive of JQUERY
+- jquery is using the sizzle library
+
+Own framework:
+==============
+- name: Greetr
+- when given a firstname, lastname, and optional language, it generates formal and informal greetings
+- support English and Spanish languages
+- reusable library/framework
+easy to type 'G$()' structure
+- support jquery
+
 
