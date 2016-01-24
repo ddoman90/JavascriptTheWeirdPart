@@ -1,5 +1,5 @@
 
-// Polyfill
+// Polyfill - mod
 if (!Object.create) {
 	Object.create = function (o) {
 		if (arguments.length > 1) {
